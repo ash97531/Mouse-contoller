@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#BCDCC5F3"
+    android:layout_height="match_parent">
+        <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ads:adSize="BANNER"
+                    android:layout_gravity="center"
+                    ads:adUnitId="@string/banner_ads_id"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enterIP"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/custom_input"
+                    android:digits="0123456789."
+                    android:hint="Host IP Address..."
+                    android:inputType="number|numberDecimal"
+                    android:paddingLeft="15dp"
+                    android:textColor="#7300FF"
+                    android:textColorHint="#7300FF"
+                    android:textSize="30sp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <android.widget.Button
+                    android:id="@+id/connect"
+                    android:layout_width="306dp"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="18dp"
+                    android:text="CONNECT"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:id="@+id/statusInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="center"
+                    android:text="Try Again !!!"
+                    android:textColor="#FFFB4444"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+                <android.widget.Button
+                    android:id="@+id/continueToController"
+                    android:layout_width="289dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="24dp"
+                    android:text="CONTINUE"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/faded_button" />
+
+                <android.widget.Button
+                    android:id="@+id/HowToUse"
+                    android:layout_width="288dp"
+                    android:layout_gravity="center"
+                    android:layout_height="73dp"
+                    android:layout_marginTop="24dp"
+                    android:text="HOW TO USE"
+                    android:background="@drawable/button"
+                    android:textSize="24sp" />
+
+
+        </LinearLayout>
+</ScrollView>

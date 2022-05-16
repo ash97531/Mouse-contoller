@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SecondFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<!--        <com.google.android.gms.ads.AdView-->
+<!--            android:id="@+id/adViewBanner3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:adSize="BANNER"-->
+<!--            app:adUnitId="ca-app-pub-3940256099942544/6300978111"-->
+<!--            android:layout_gravity="center"/>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Once downloaded double click to run the file"
+            style="@style/InstructionView"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wait 10-20 sec for file to run"
+                style="@style/InstructionView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Make sure your PC and phone are connected to same network"
+            style="@style/InstructionView"/>
+
+        <TextView
+            style="@style/InstructionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter IP address in input box and click connect button" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Once connection successful you will see 'Connected' dialogue box"
+            style="@style/InstructionView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click on continue"
+            style="@style/InstructionView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You see a Keyboard controller as shown below"
+            style="@style/InstructionView"/>
+
+        <ImageView
+            android:id="@+id/keyboard_ss"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            android:background="@drawable/keyboard_controller_ss"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Long press to use hot keys."
+            style="@style/InstructionView"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You can see mouse key in bottom left corner. Press it to switch to Mouse controller."
+                style="@style/InstructionView"/>
+
+            <ImageView
+                android:id="@+id/mouse_ss"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"
+                android:background="@drawable/mouse_controller_ss"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONTROLS :"
+            android:gravity="center"
+            style="@style/InstructionHeading"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rotate your phone to control mouse movement"
+            style="@style/InstructionView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Press LEFT : For left click"
+            style="@style/InstructionView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Press RIGHT : For right click"
+            style="@style/InstructionView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Press UP : For up scroll wheel"
+            style="@style/InstructionView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Press DOWN : For down scroll wheel"
+            style="@style/InstructionView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Press MIDDLE : For middle button click"
+            style="@style/InstructionView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Press keyboard button on top-right corner to switch to Keyboard controller."
+            style="@style/InstructionView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap anywhere except button to hold"
+            style="@style/InstructionView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Watch demo "
+            android:gravity="center"
+            style="@style/InstructionHeading"/>
+
+        <TextView
+            android:id="@+id/youtube_demo_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorLink="#00ABFB"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:autoLink="web"
+            android:textIsSelectable="true"
+            android:layout_marginBottom="40dp"
+            android:text="@string/youtube_demo_link"/>
+
+    </LinearLayout>
+
+</ScrollView>

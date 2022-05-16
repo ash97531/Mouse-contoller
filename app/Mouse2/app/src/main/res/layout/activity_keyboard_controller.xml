@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginTop="4dp"
+    tools:context=".KeyboardController">
+
+
+
+    <Button
+        android:id="@+id/back_tick"
+        style="@style/KeyBoardSqButton"
+        android:layout_width="24dp"
+        android:text="`"
+        app:layout_constraintBottom_toTopOf="@+id/tab"
+        app:layout_constraintEnd_toStartOf="@+id/one"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/one"
+        style="@style/KeyBoardSqButton"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/q_btn"
+        app:layout_constraintEnd_toStartOf="@+id/two"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/back_tick"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/two"
+        style="@style/KeyBoardSqButton"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/w_btn"
+        app:layout_constraintEnd_toStartOf="@+id/switch_to_keyboard"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/one"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/switch_to_keyboard"
+        style="@style/KeyBoardSqButton"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@+id/e_btn"
+        app:layout_constraintEnd_toStartOf="@+id/four"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/two"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/four"
+        style="@style/KeyBoardSqButton"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/r_btn"
+        app:layout_constraintEnd_toStartOf="@+id/five"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/switch_to_keyboard"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/five"
+        style="@style/KeyBoardSqButton"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/t_btn"
+        app:layout_constraintEnd_toStartOf="@+id/six"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/four"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/six"
+        style="@style/KeyBoardSqButton"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@+id/y_btn"
+        app:layout_constraintEnd_toStartOf="@+id/seven"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/five"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/seven"
+        style="@style/KeyBoardSqButton"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/u_btn"
+        app:layout_constraintEnd_toStartOf="@+id/eight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/six"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/eight"
+        style="@style/KeyBoardSqButton"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@+id/i_btn"
+        app:layout_constraintEnd_toStartOf="@+id/nine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seven"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nine"
+        style="@style/KeyBoardSqButton"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@+id/o_btn"
+        app:layout_constraintEnd_toStartOf="@+id/zero"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eight"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/zero"
+        style="@style/KeyBoardSqButton"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/minus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/nine"
+        app:layout_constraintTop_toTopOf="@+id/nine" />
+
+
+    <Button
+        android:id="@+id/minus"
+        style="@style/KeyBoardSqButton"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/left_sq_brac_btn"
+        app:layout_constraintEnd_toStartOf="@+id/equal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/zero"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/equal"
+        style="@style/KeyBoardSqButton"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="@+id/minus"
+        app:layout_constraintEnd_toStartOf="@+id/backspace"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/minus"
+        app:layout_constraintTop_toTopOf="@+id/minus" />
+
+
+    <Button
+        android:id="@+id/backspace"
+        style="@style/KeyBoardSqButton"
+        android:layout_width="72dp"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="@+id/equal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/equal"
+        app:layout_constraintTop_toTopOf="@+id/equal" />
+
+    <!--    -->
+    <!--    -->
+
+
+    <Button
+        android:id="@+id/tab"
+        style="@style/KeyBoardSqButton"
+        android:layout_width="52dp"
+        android:text="TAB"
+        app:layout_constraintBottom_toTopOf="@+id/caps_lock"
+        app:layout_constraintEnd_toStartOf="@+id/q_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_tick" />
+
+    <Button
+        android:id="@+id/q_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="Q"
+        app:layout_constraintBottom_toTopOf="@+id/a_btn"
+        app:layout_constraintEnd_toStartOf="@+id/w_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tab"
+        app:layout_constraintTop_toBottomOf="@+id/one" />
+
+    <Button
+        android:id="@+id/w_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="W"
+        app:layout_constraintBottom_toTopOf="@+id/s_btn"
+        app:layout_constraintEnd_toStartOf="@+id/e_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/q_btn"
+        app:layout_constraintTop_toBottomOf="@+id/two" />
+
+    <Button
+        android:id="@+id/e_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="E"
+        app:layout_constraintBottom_toTopOf="@+id/d_btn"
+        app:layout_constraintEnd_toStartOf="@+id/r_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/w_btn"
+        app:layout_constraintTop_toBottomOf="@+id/switch_to_keyboard" />
+
+    <Button
+        android:id="@+id/r_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="R"
+        app:layout_constraintBottom_toTopOf="@+id/f_btn"
+        app:layout_constraintEnd_toStartOf="@+id/t_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/e_btn"
+        app:layout_constraintTop_toBottomOf="@+id/four" />
+
+    <Button
+        android:id="@+id/t_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="T"
+        app:layout_constraintBottom_toTopOf="@+id/g_btn"
+        app:layout_constraintEnd_toStartOf="@+id/y_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/r_btn"
+        app:layout_constraintTop_toBottomOf="@+id/five" />
+
+    <Button
+        android:id="@+id/y_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="Y"
+        app:layout_constraintBottom_toTopOf="@+id/h_btn"
+        app:layout_constraintEnd_toStartOf="@+id/u_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/t_btn"
+        app:layout_constraintTop_toBottomOf="@+id/six" />
+
+    <Button
+        android:id="@+id/u_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="U"
+        app:layout_constraintBottom_toTopOf="@+id/j_btn"
+        app:layout_constraintEnd_toStartOf="@+id/i_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/y_btn"
+        app:layout_constraintTop_toBottomOf="@+id/seven" />
+
+    <Button
+        android:id="@+id/i_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="I"
+        app:layout_constraintBottom_toTopOf="@+id/k_btn"
+        app:layout_constraintEnd_toStartOf="@+id/o_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/u_btn"
+        app:layout_constraintTop_toBottomOf="@+id/eight" />
+
+    <Button
+        android:id="@+id/o_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="T"
+        app:layout_constraintBottom_toTopOf="@+id/l_btn"
+        app:layout_constraintEnd_toStartOf="@+id/p_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/i_btn"
+        app:layout_constraintTop_toBottomOf="@+id/nine" />
+
+    <Button
+        android:id="@+id/p_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="Y"
+        app:layout_constraintBottom_toBottomOf="@+id/o_btn"
+        app:layout_constraintEnd_toStartOf="@+id/left_sq_brac_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/o_btn"
+        app:layout_constraintTop_toTopOf="@+id/o_btn" />
+
+    <Button
+        android:id="@+id/left_sq_brac_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="["
+        app:layout_constraintBottom_toTopOf="@+id/apostrophe"
+        app:layout_constraintEnd_toStartOf="@+id/right_sq_brac_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/p_btn"
+        app:layout_constraintTop_toBottomOf="@+id/minus" />
+
+    <Button
+        android:id="@+id/right_sq_brac_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="]"
+        app:layout_constraintBottom_toBottomOf="@+id/left_sq_brac_btn"
+        app:layout_constraintEnd_toStartOf="@+id/back_slash"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/left_sq_brac_btn"
+        app:layout_constraintTop_toTopOf="@+id/left_sq_brac_btn" />
+
+    <Button
+        android:id="@+id/back_slash"
+        style="@style/KeyBoardSqButton"
+        android:text="\\"
+        app:layout_constraintBottom_toBottomOf="@+id/right_sq_brac_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/right_sq_brac_btn"
+        app:layout_constraintTop_toTopOf="@+id/right_sq_brac_btn" />
+
+    <!--        -->
+    <!--        -->
+
+
+    <Button
+        android:id="@+id/caps_lock"
+        style="@style/KeyBoardSqButton"
+        android:layout_width="64dp"
+        android:text="CAPS"
+        app:layout_constraintBottom_toTopOf="@+id/shift_1"
+        app:layout_constraintEnd_toStartOf="@+id/a_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab" />
+
+    <Button
+        android:id="@+id/a_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="A"
+        app:layout_constraintBottom_toTopOf="@+id/z_btn"
+        app:layout_constraintEnd_toStartOf="@+id/s_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/caps_lock"
+        app:layout_constraintTop_toBottomOf="@+id/q_btn" />
+
+    <Button
+        android:id="@+id/s_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="S"
+        app:layout_constraintBottom_toTopOf="@+id/x_btn"
+        app:layout_constraintEnd_toStartOf="@+id/d_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/a_btn"
+        app:layout_constraintTop_toBottomOf="@+id/w_btn" />
+
+    <Button
+        android:id="@+id/d_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="D"
+        app:layout_constraintBottom_toTopOf="@+id/c_btn"
+        app:layout_constraintEnd_toStartOf="@+id/f_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/s_btn"
+        app:layout_constraintTop_toBottomOf="@+id/e_btn" />
+
+    <Button
+        android:id="@+id/f_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="F"
+        app:layout_constraintBottom_toTopOf="@+id/v_btn"
+        app:layout_constraintEnd_toStartOf="@+id/g_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/d_btn"
+        app:layout_constraintTop_toBottomOf="@+id/r_btn" />
+
+    <Button
+        android:id="@+id/g_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="G"
+        app:layout_constraintBottom_toTopOf="@+id/b_btn"
+        app:layout_constraintEnd_toStartOf="@+id/h_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f_btn"
+        app:layout_constraintTop_toBottomOf="@+id/t_btn" />
+
+    <Button
+        android:id="@+id/h_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="H"
+        app:layout_constraintBottom_toTopOf="@+id/n_btn"
+        app:layout_constraintEnd_toStartOf="@+id/j_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/g_btn"
+        app:layout_constraintTop_toBottomOf="@+id/y_btn" />
+
+    <Button
+        android:id="@+id/j_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="J"
+        app:layout_constraintBottom_toTopOf="@+id/m_btn"
+        app:layout_constraintEnd_toStartOf="@+id/k_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/h_btn"
+        app:layout_constraintTop_toBottomOf="@+id/u_btn" />
+
+    <Button
+        android:id="@+id/k_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="K"
+        app:layout_constraintBottom_toTopOf="@+id/comma"
+        app:layout_constraintEnd_toStartOf="@+id/l_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/j_btn"
+        app:layout_constraintTop_toBottomOf="@+id/i_btn" />
+
+    <Button
+        android:id="@+id/l_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="L"
+        app:layout_constraintBottom_toTopOf="@+id/dot"
+        app:layout_constraintEnd_toStartOf="@+id/colon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/k_btn"
+        app:layout_constraintTop_toBottomOf="@+id/o_btn" />
+
+    <Button
+        android:id="@+id/colon"
+        style="@style/KeyBoardSqButton"
+        android:text=";"
+        app:layout_constraintBottom_toBottomOf="@+id/l_btn"
+        app:layout_constraintEnd_toStartOf="@+id/apostrophe"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/l_btn"
+        app:layout_constraintTop_toTopOf="@+id/l_btn" />
+
+    <Button
+        android:id="@+id/apostrophe"
+        style="@style/KeyBoardSqButton"
+        android:text="'"
+        app:layout_constraintBottom_toTopOf="@+id/shift_2"
+        app:layout_constraintEnd_toStartOf="@+id/enter"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/colon"
+        app:layout_constraintTop_toBottomOf="@+id/left_sq_brac_btn" />
+
+    <Button
+        android:id="@+id/enter"
+        style="@style/KeyBoardSqButton"
+        android:layout_width="80dp"
+        android:text="ENTER"
+        app:layout_constraintBottom_toBottomOf="@+id/apostrophe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/apostrophe"
+        app:layout_constraintTop_toTopOf="@+id/apostrophe" />
+
+
+    <!--        -->
+    <!--        -->
+
+
+    <Button
+        android:id="@+id/shift_1"
+        style="@style/KeyBoardSqButton"
+        android:layout_width="99dp"
+        android:text="SHIFT"
+        app:layout_constraintBottom_toTopOf="@+id/ctrl_1"
+        app:layout_constraintEnd_toStartOf="@+id/z_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caps_lock" />
+
+    <Button
+        android:id="@+id/z_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="Z"
+        app:layout_constraintBottom_toTopOf="@+id/function"
+        app:layout_constraintEnd_toStartOf="@+id/x_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shift_1"
+        app:layout_constraintTop_toBottomOf="@+id/a_btn" />
+
+    <Button
+        android:id="@+id/x_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="X"
+        app:layout_constraintBottom_toTopOf="@+id/alt_1"
+        app:layout_constraintEnd_toStartOf="@+id/c_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/z_btn"
+        app:layout_constraintTop_toBottomOf="@+id/s_btn" />
+
+    <Button
+        android:id="@+id/c_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="C"
+        app:layout_constraintBottom_toTopOf="@+id/spacebar"
+        app:layout_constraintEnd_toStartOf="@+id/v_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/x_btn"
+        app:layout_constraintTop_toBottomOf="@+id/d_btn" />
+
+    <Button
+        android:id="@+id/v_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="V"
+        app:layout_constraintBottom_toTopOf="@+id/spacebar"
+        app:layout_constraintEnd_toStartOf="@+id/b_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/c_btn"
+        app:layout_constraintTop_toBottomOf="@+id/f_btn" />
+
+    <Button
+        android:id="@+id/b_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="B"
+        app:layout_constraintBottom_toTopOf="@+id/spacebar"
+        app:layout_constraintEnd_toStartOf="@+id/n_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/v_btn"
+        app:layout_constraintTop_toBottomOf="@+id/g_btn" />
+
+
+    <Button
+        android:id="@+id/n_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="N"
+        app:layout_constraintBottom_toTopOf="@+id/spacebar"
+        app:layout_constraintEnd_toStartOf="@+id/m_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b_btn"
+        app:layout_constraintTop_toBottomOf="@+id/h_btn" />
+
+    <Button
+        android:id="@+id/m_btn"
+        style="@style/KeyBoardSqButton"
+        android:text="M"
+        app:layout_constraintBottom_toTopOf="@+id/alt_2"
+        app:layout_constraintEnd_toStartOf="@+id/comma"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/n_btn"
+        app:layout_constraintTop_toBottomOf="@+id/j_btn" />
+
+    <Button
+        android:id="@+id/comma"
+        style="@style/KeyBoardSqButton"
+        android:text=","
+        app:layout_constraintBottom_toTopOf="@+id/ctrl_2"
+        app:layout_constraintEnd_toStartOf="@+id/dot"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/m_btn"
+        app:layout_constraintTop_toBottomOf="@+id/k_btn" />
+
+    <Button
+        android:id="@+id/dot"
+        style="@style/KeyBoardSqButton"
+        android:text="."
+        app:layout_constraintBottom_toTopOf="@+id/left_arrow"
+        app:layout_constraintEnd_toStartOf="@+id/forward_slash"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/comma"
+        app:layout_constraintTop_toBottomOf="@+id/l_btn" />
+
+    <Button
+        android:id="@+id/forward_slash"
+        style="@style/KeyBoardSqButton"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="@+id/dot"
+        app:layout_constraintEnd_toStartOf="@+id/shift_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dot"
+        app:layout_constraintTop_toTopOf="@+id/dot" />
+
+    <Button
+        android:id="@+id/shift_2"
+        style="@style/KeyBoardSqButton"
+        android:layout_width="99dp"
+        android:text="SHIFT"
+        app:layout_constraintBottom_toTopOf="@+id/right_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/forward_slash"
+        app:layout_constraintTop_toBottomOf="@+id/apostrophe" />
+
+
+    <!--        -->
+    <!--        -->
+
+
+    <Button
+        android:id="@+id/ctrl_1"
+        style="@style/KeyBoardSqButton"
+        android:text="CTRL"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/function"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shift_1" />
+
+    <Button
+        android:id="@+id/function"
+        style="@style/KeyBoardSqButton"
+        android:text="FN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/windows"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ctrl_1"
+        app:layout_constraintTop_toBottomOf="@+id/z_btn" />
+
+    <ImageButton
+        android:id="@+id/windows"
+        style="@style/KeyBoardSqButton"
+        android:src="@drawable/window_icon"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/alt_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/function"
+        app:layout_constraintTop_toBottomOf="@+id/shift_1" />
+
+    <Button
+        android:id="@+id/alt_1"
+        style="@style/KeyBoardSqButton"
+        android:text="ALT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spacebar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/windows"
+        app:layout_constraintTop_toBottomOf="@+id/x_btn" />
+
+    <Button
+        android:id="@+id/spacebar"
+        style="@style/KeyBoardSqButton"
+        android:layout_width="209dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/alt_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/alt_1"
+        app:layout_constraintTop_toBottomOf="@+id/c_btn" />
+
+    <Button
+        android:id="@+id/alt_2"
+        style="@style/KeyBoardSqButton"
+        android:text="ALT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ctrl_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spacebar"
+        app:layout_constraintTop_toBottomOf="@+id/m_btn" />
+
+    <Button
+        android:id="@+id/ctrl_2"
+        style="@style/KeyBoardSqButton"
+        android:text="CTRL"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/left_arrow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/alt_2"
+        app:layout_constraintTop_toBottomOf="@+id/comma" />
+
+    <ImageButton
+        android:id="@+id/left_arrow"
+        style="@style/KeyBoardSqButton"
+        android:src="@drawable/keyboard_arrow_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/down_arrow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ctrl_2"
+        app:layout_constraintTop_toBottomOf="@+id/dot" />
+
+    <ImageButton
+        android:id="@+id/up_arrow"
+        style="@style/KeyBoardSqButton"
+        android:layout_height="24dp"
+        android:src="@drawable/keyboard_arrow_up"
+        app:layout_constraintEnd_toStartOf="@+id/right_arrow"
+        app:layout_constraintStart_toEndOf="@+id/left_arrow"
+        app:layout_constraintTop_toTopOf="@+id/left_arrow" />
+
+    <ImageButton
+        android:id="@+id/down_arrow"
+        style="@style/KeyBoardSqButton"
+        android:layout_height="24dp"
+        android:src="@drawable/keyboard_arrow_down"
+        app:layout_constraintBottom_toBottomOf="@+id/left_arrow"
+        app:layout_constraintEnd_toStartOf="@+id/right_arrow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/left_arrow" />
+
+    <ImageButton
+        android:id="@+id/right_arrow"
+        style="@style/KeyBoardSqButton"
+        android:src="@drawable/keyboard_arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/switch_to_mouse"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/down_arrow"
+        app:layout_constraintTop_toBottomOf="@+id/shift_2" />
+
+    <ImageButton
+        android:id="@+id/switch_to_mouse"
+        style="@style/KeyBoardSqButton"
+        android:src="@drawable/mouse"
+        app:layout_constraintBottom_toBottomOf="@+id/right_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/right_arrow"
+        app:layout_constraintTop_toTopOf="@+id/right_arrow" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--</HorizontalScrollView>-->
