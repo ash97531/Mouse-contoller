@@ -37,7 +37,6 @@ import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity {
 
-//    public Connector connector = new Connector("helo");
     Thread thread1 = null;
     TextView statusInfo, xText, yText, zText;
     String SERVER_IP;
@@ -49,8 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
     private InterstitialAd mInterstitialAd;
 
-//    private Sensor mySensor;
-//    private SensorManager SM;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         mAdView.setAdSize(AdSize.BANNER);
 
         mAdView.setAdUnitId(getString(R.string.banner_ads_id));
-// TODO: Add adView to your view hierarchy.
 
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -170,9 +166,6 @@ public class MainActivity extends AppCompatActivity {
                     Log.v("else", "else");
                 }
 
-//                Intent intent = new Intent(MainActivity.this, HowToUse.class);
-//                startActivity(intent);
-                Log.v("outer","outer");
 
 
             }
@@ -297,26 +290,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 1500);
 
-//                runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-////                        tvMessages.setText("Connected\n");
-//                    }
-//                });
-//                new Thread(new Thread2()).start();
             } catch (IOException e) {
                 e.printStackTrace();
-//                new Thread() {
-//                    public void run() {
-//                        errorMessage.setVisibility(View.VISIBLE);
-//                        try {
-//                            sleep(1000);
-//                        } catch (InterruptedException interruptedException) {
-//                            interruptedException.printStackTrace();
-//                        }
-//                        errorMessage.setVisibility(View.GONE);
-//                    }
-//                }.start();
                 connected = false;
                 runOnUiThread(new Runnable() {
                     @Override

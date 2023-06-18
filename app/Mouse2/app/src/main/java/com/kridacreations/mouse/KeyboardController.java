@@ -20,6 +20,7 @@ import java.net.Socket;
 
 public class KeyboardController extends AppCompatActivity {
 
+    // Setting up keyboard buttons
     String [] alphabet = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
     String [] alphabetShifted = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
@@ -55,6 +56,7 @@ public class KeyboardController extends AppCompatActivity {
         Intent intent = getIntent();
         SERVER_IP = intent.getStringExtra("IP");
 
+        // Getting keyboard buttons from XML
         alphabetBtnArr = new Button[]{
                 (Button) findViewById(R.id.a_btn),
                 (Button) findViewById(R.id.b_btn),
@@ -131,16 +133,15 @@ public class KeyboardController extends AppCompatActivity {
         rightArrow = (ImageButton) findViewById(R.id.right_arrow);
         switchToMouse = (ImageButton) findViewById(R.id.switch_to_mouse);
 
-//        Configuration configuration = this.getResources().getConfiguration();
-//        int screenWidthDp = configuration.screenWidthDp;
-//        int screenHeigthDp = configuration.screenHeightDp;
-
+        // There can be two possibilities for shift key: single or hold
+        // Single: When shift key is pressed and released
         shift1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 shiftKeyPressed();
             }
         });
+        // Hold: When shift key is pressed and not released
         shift1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -161,6 +162,7 @@ public class KeyboardController extends AppCompatActivity {
             }
         });
 
+        // Same as shift1
         shift2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -188,6 +190,8 @@ public class KeyboardController extends AppCompatActivity {
             }
         });
 
+        // There can be two possibilities for control key: single or hold
+        // Single: When ctrl key is pressed and released
         ctrl1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -195,6 +199,7 @@ public class KeyboardController extends AppCompatActivity {
                 new Thread(new SendKeyboardCommand()).start();
             }
         });
+        // Hold: When ctrl key is pressed and not released
         ctrl1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -215,6 +220,7 @@ public class KeyboardController extends AppCompatActivity {
             }
         });
 
+        // Same as ctrl1
         ctrl2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -341,6 +347,8 @@ public class KeyboardController extends AppCompatActivity {
             }
         });
 
+        // This function to switch to mouse movement page
+        // It will swithc to MouseController activity with the same IP address
         switchToMouse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -354,6 +362,7 @@ public class KeyboardController extends AppCompatActivity {
             }
         });
 
+        // Setting key for alphabets, numbers and signs
         for (int i=0; i<26; i++){
             int finalI = i;
 
@@ -388,6 +397,9 @@ public class KeyboardController extends AppCompatActivity {
         }
     }
 
+    // Creating a thread to send the key pressed to the server
+    // The server will then send the key pressed to the computer
+    // And the server will execute the command
     class SendKeyboardCommand implements Runnable{
         @Override
         public void run() {
@@ -403,7 +415,7 @@ public class KeyboardController extends AppCompatActivity {
             }
         }
     }
-
+    
     void functionKeyPressed(){
         functionBtnShift = !functionBtnShift;
 

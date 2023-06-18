@@ -30,7 +30,7 @@ import com.google.android.material.tabs.TabLayout;
 import static android.content.ContentValues.TAG;
 
 public class HowToUse extends AppCompatActivity {
-
+    // How to use page
     LinearLayout dotsLayout;
     TextView[] dots;
 
@@ -75,9 +75,6 @@ public class HowToUse extends AppCompatActivity {
         adapter = new FragmentAdapter(fm, getLifecycle());
         pager2.setAdapter(adapter);
 
-//        tabLayout.addTab(tabLayout.newTab().setText("First"));
-//        tabLayout.addTab(tabLayout.newTab().setText("Second"));
-//        tabLayout.addTab(tabLayout.newTab().setText("Third"));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -128,44 +125,4 @@ public class HowToUse extends AppCompatActivity {
         }
     }
 
-//    @Override
-//    public void onBackPressed() {
-//
-//        if (mInterstitialAd != null) {
-//            mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback(){
-//                @Override
-//                public void onAdDismissedFullScreenContent() {
-////                    // Called when fullscreen content is dismissed.
-////                    Intent intent = new Intent(HowToUse.this, MainActivity.class);
-////                    startActivity(intent);
-////                    Log.v("else","else");
-////                    Log.d("TAG", "The ad was dismissed.");
-//                }
-//
-//                @Override
-//                public void onAdFailedToShowFullScreenContent(AdError adError) {
-////                    // Called when fullscreen content failed to show.
-////                    Intent intent = new Intent(HowToUse.this, MainActivity.class);
-////                    startActivity(intent);
-////                    Log.v("else","else");
-////                    Log.d("TAG", "The ad failed to show.");
-//                }
-//
-//                @Override
-//                public void onAdShowedFullScreenContent() {
-//                    // Called when fullscreen content is shown.
-//                    // Make sure to set your reference to null so you don't
-//                    // show it a second time.
-//                    mInterstitialAd = null;
-//                    Log.d("TAG", "The ad was shown.");
-//                }
-//            });
-//            mInterstitialAd.show(HowToUse.this);
-//            Log.v("shown","shown");
-//        } else {
-////            Intent intent = new Intent(HowToUse.this, MainActivity.class);
-////            startActivity(intent);
-////            Log.v("else","else");
-//        }
-//    }
 }

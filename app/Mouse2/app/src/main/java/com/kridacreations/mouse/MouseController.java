@@ -23,25 +23,28 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class MouseController extends AppCompatActivity implements SensorEventListener {
-//    TextView xText, yText, zText;
+    // This text shows any error or warning
     EditText enterMessage;
+    // Getting click and scroll buttons
     Button leftClick, rightClick, middleClick, scrollDown, scrollUp;
     ImageButton switchToKeyboard;
     String SERVER_IP, clickInfo;
     TextView gyroscopeAlert, holdTextView, tapToUnhold, connectionDot1, connectionDot2, connectionDot3;
     LinearLayout holdLayout;
+
+    // Current value and coordinates of gyroscope
     float curX = 0, curY = 0, curZ, setX = 0, setY = 0, setZ = 0;
 
     Boolean isHold = false, isScrollingUp = false, isScrollingDown = false;
 
-//    Thread thread1 = null, thread4 = null;
+    // Socket and printwriter for sending data to server
     Thread thread2 = null;
 
+    // Getting sensor manager and gyroscope sensor for rotation
     Sensor gyroscopeSensor;
     SensorManager SM;
 
     Runnable mouseMove;
-//    Runnable task;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,14 +76,18 @@ public class MouseController extends AppCompatActivity implements SensorEventLis
         connectionDot2 = (TextView) findViewById(R.id.connection_dot_2);
         connectionDot3 = (TextView) findViewById(R.id.connection_dot_3);
 
+        // Getting sensor manager and gyroscope sensor for rotation
         SM = (SensorManager)getSystemService(SENSOR_SERVICE);
         gyroscopeSensor = SM.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
+
+        // If gyroscope sensor is not present, show alert
         if(gyroscopeSensor == null){
             gyroscopeAlert.setVisibility(View.VISIBLE);
         }
         Log.v("mouse controller", "mouse controller");
 
+        // Registering gyroscope sensor
         SM.registerListener(this, gyroscopeSensor, SensorManager.SENSOR_DELAY_GAME);
 
         switchToKeyboard.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +104,9 @@ public class MouseController extends AppCompatActivity implements SensorEventLis
             }
         });
 
+        // This button will hold event to server
+        // Which means mouse will not move when we are on hold
+        // Press again to unhold
         holdLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,10 +138,6 @@ public class MouseController extends AppCompatActivity implements SensorEventLis
         mouseMove = new Runnable() {
             @Override
             public void run() {
-//                Timer t = new Timer();
-//                t.scheduleAtFixedRate(new TimerTask() {
-//                    @Override
-//                    public void run() {
                         if(!isHold) {
                             try {
                                 Socket socket = new Socket(SERVER_IP, 5000);
@@ -140,18 +146,11 @@ public class MouseController extends AppCompatActivity implements SensorEventLis
                                 outToServer.print(curX * 60);
                                 outToServer.print(" ");
                                 outToServer.print(curZ * 60);
-
-//                        outToServer.print(curX * 60);
-//                        outToServer.print(" ");
-//                        outToServer.print(curY * 60);
-
                                 outToServer.flush();
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
                         }
-//                    }
-//                }, 0, 10);
             }
         };
 
@@ -171,9 +170,6 @@ public class MouseController extends AppCompatActivity implements SensorEventLis
             @Override
             public void onClick(View v) {
                 clickInfo = "R";
-//                Log.v("Rigth click", "Right click");
-//                thread3 = new java.lang.Thread(new Thread3());
-//                thread3.start();
                 new java.lang.Thread(new SendMouseCommand()).start();
             }
         });
@@ -182,9 +178,7 @@ public class MouseController extends AppCompatActivity implements SensorEventLis
             @Override
             public void onClick(View v) {
                 clickInfo = "M";
-//                Log.v("Middle click", "Middle click");
                 new java.lang.Thread(new SendMouseCommand()).start();
-//                thread3;
             }
         });
 

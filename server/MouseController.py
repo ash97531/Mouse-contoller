@@ -13,7 +13,7 @@ sizeX, sizeY = pg.size()
 sizeX -= 4
 sizeY -= 4
 
-
+# Scroll up function
 def scrollUpFunc():
     # global isScrollingUp
     while True:
@@ -24,7 +24,7 @@ def scrollUpFunc():
 
 scrollUpFunc.isScrollingUp = 0
     
-
+# Scroll down function
 def scrollDownFunc():
     # global isScrollingDown
     while True:
@@ -35,7 +35,7 @@ def scrollDownFunc():
 
 scrollDownFunc.isScrollingDown = 0
 
-
+# Move cursor function
 def moveCursor(val):
     val = val.split()
     posX, posY = pg.position()
@@ -54,6 +54,7 @@ def moveCursor(val):
     else:
         pg.moveTo(8, sizeY-4)
 
+# Function to execute keyboard commands
 def executeKeyboard(command):
     if(command == "shiftDown"):
         pg.keyDown("shift")
@@ -66,6 +67,7 @@ def executeKeyboard(command):
     else:
         pg.press(command)
 
+# Function to execute mouse click and scroll commands
 def executeMouse(command):
     if(command == 'L'):
         pg.click()
@@ -118,6 +120,8 @@ def executeMouse(command):
     else:
         moveCursor(command)
 
+
+# Function to get IP address of the PC
 def get_ip_address():
 
     print("Make sure your PC and Phone is connected to same network")
@@ -138,8 +142,6 @@ def get_ip_address():
             print()
             print("If connected press enter to continue")
             notConnected = True
-            # pg.sleep(3)
-            # sys.exit()
 
         if(notConnected == False):
             break
@@ -164,17 +166,22 @@ print('Bind Succesfull')
 s.listen(10)
 print('Now listening....')
 
+
+# Running the server
 while 1:
+    # Setting up connection
     conn, addr = s.accept()
     buf = conn.recv(1023).decode('utf-8')
 
+    # Switching to mouse or keyboard mode
     if(buf == 'keyboard'):
         mouse = False
     elif(buf == 'mouse'):
         mouse = True
     elif (buf == 'exit'):
         break
-
+    
+    # If command is to execute mouse or keyboard
     if(mouse):
         threading.Thread(target=executeMouse, args=(buf,)).start()
     else:

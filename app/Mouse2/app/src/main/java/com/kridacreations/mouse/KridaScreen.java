@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 
 public class KridaScreen extends AppCompatActivity {
-
+    // The initial screen that is displayed when the app is opened
+    // Splash screen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,9 +20,6 @@ public class KridaScreen extends AppCompatActivity {
         final Intent[] i = new Intent[1];
         Runnable myRunnable = new Runnable() {
             public void run() {
-                // Things to be done
-
-//                i[0] = new Intent(KridaScreen.this, MainActivity.class);
                 i[0] = new Intent(KridaScreen.this, MainActivity.class);
                 startActivity(i[0]);
                 finish();
