@@ -6,7 +6,7 @@ This is mobile application which is used to control all the keyboard and mouse f
 - It also controls keyboard keys for typing or other uses.
 - Technology used: Android, Java, Python, Sockets
 
-# How to use the app![Screenshot 2022-05-02 003000](https://github.com/ash97531/Mouse-contoller/assets/77725047/895aaf20-7a82-4680-92b2-9c1d8e81a429)
+# How to use the app!
 
 - Install the mobile app: [https://play.google.com/store/apps/details?id=com.kridacreations.mouse](https://play.google.com/store/apps/details?id=com.kridacreations.mouse)
 - Install .exe file (server): [https://ash97531.itch.io/mousecontroller](https://ash97531.itch.io/mousecontroller)
